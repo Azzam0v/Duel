@@ -22,6 +22,7 @@ class FormManager
 
     public function sendDuelRequestForm(Player $player): void
     {
+        //TODO : lier a la config
         $form = new CustomForm(function (Player $player, array $data = null) {
             if ($data === null) return;
             $opponentName = $data[1];

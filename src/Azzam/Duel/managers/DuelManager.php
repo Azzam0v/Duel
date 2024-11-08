@@ -95,6 +95,8 @@ class DuelManager
 
     private function startDuel(Player $player1, Player $player2, int $amount, string $kit): void
     {
+        //TODO : lier a la config
+
         $world = $this->plugin->getServer()->getWorldManager()->getWorldByName("Duel");
         $player1->teleport(new Position(-48, 39, -32, $world));
         $player2->teleport(new Position(-48, 39, 8, $world));
@@ -110,7 +112,7 @@ class DuelManager
 
     public function handlePlayerJoin(Player $player): void
     {
-        // Si le joueur est dans le monde "Duel", on s'assure qu'il n'a pas d'équipement.
+        //TODO : lier a la config
         if ($player->getWorld()->getFolderName() === "Duel") {
             $player->getInventory()->clearAll();
             $player->getArmorInventory()->clearAll();

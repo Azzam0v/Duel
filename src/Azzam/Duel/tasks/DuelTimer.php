@@ -17,6 +17,7 @@ class DuelTimer extends Task
     public function __construct(Main $plugin)
     {
         $this->plugin = $plugin;
+        //TODO : lier a la config
         $this->timeRemaining = 190;
     }
 
@@ -52,7 +53,7 @@ class DuelTimer extends Task
     {
         foreach ($world->getPlayers() as $player) {
             $this->resetPlayerState($player);
-            $player->teleport(Server::getInstance()->getWorldManager()->getWorldByName("AzzamSpawn")->getSafeSpawn());
+            $player->teleport(Server::getInstance()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
             $player->sendTitle("§9Duel", "§fMatch nul !");
         }
         unset($this->plugin->money2);

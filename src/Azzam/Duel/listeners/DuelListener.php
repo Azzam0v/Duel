@@ -31,6 +31,7 @@ class DuelListener implements Listener
 
     public function onDrop(PlayerDropItemEvent $event): void
     {
+        //TODO : lier a la config
         if ($event->getPlayer()->getWorld()->getFolderName() === "Duel") {
             $event->cancel();
         }

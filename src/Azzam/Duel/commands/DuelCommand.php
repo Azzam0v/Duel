@@ -86,6 +86,7 @@ class DuelCommand extends Command implements PluginOwned
     private function handleTeleport(Player $player): void
     {
         if ($player->getGamemode() === GameMode::CREATIVE) {
+            //TODO : lier a la config
             $world = $this->plugin->getServer()->getWorldManager()->getWorldByName("Duel");
             if ($world !== null) {
                 $player->teleport($world->getSafeSpawn());
