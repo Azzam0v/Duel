@@ -1,0 +1,14 @@
+name: Duel
+version: 0.0.1
+api: 5.0.0
+main: Azzam\Duel\Main
+author: Azzam
+
+commands:
+  duel:
+    description: Permet de lancer un duel
+    usage: "/duel"
+    permission: duel
+permissions:
+  duel:
+    default: true
